@@ -7,8 +7,6 @@
 #define GroupName "РI-61"
 #define Faculty "РТФ"
 #define University "КПI iм. Iгоря Сiкорського"
-#define semestr "1"
-#define age "17"
 
 int main()
 {
@@ -17,8 +15,15 @@ int main()
     float admissionScore;
     int grade1, grade2, grade3, grade4, grade5;
     double averageGrade;
+    unsigned int semestr, age;
 
     printf("%s %s, виконуйте те що вам кажуть\n", Name, LastName);
+
+    printf("Введiть свiй вiк: ");
+    scanf("%u", &age);
+
+    printf("Введiть номер семестру : ");
+    scanf("%u", &semestr);
 
     printf("Введiть свiй вступний бал: ");
     scanf("%f", &admissionScore);
@@ -32,17 +37,17 @@ int main()
     printf("Введiть оцiнку за предмет №3: ");
     scanf("%d", &grade3);
 
-        printf("Введiть оцiнку за предмет №4: ");
+    printf("Введiть оцiнку за предмет №4: ");
     scanf("%d", &grade4);
 
-        printf("Введiть оцiнку за предмет №5: ");
+    printf("Введiть оцiнку за предмет №5: ");
     scanf("%d", &grade5);
 
     averageGrade = (double)(grade1 + grade2 + grade3 + grade4 + grade5)/ 5;
 
     system("cls");
     printf("----------------------------------------\n");
-    printf("Студент: %s %s\nВiк: %s\nУнiверситет: %s\nФакультет: %s\nГрупа: %s\nСеместр: %s\n", Name, LastName, age, University, Faculty, GroupName, semestr);
+    printf("Студент: %s %s\nВiк: %u\nУнiверситет: %s\nФакультет: %s\nГрупа: %s\nСеместр: %u\n", Name, LastName, age, University, Faculty, GroupName, semestr);
     printf("----------------------------------------\n");
     printf("Вступний бал: %.1f\n", admissionScore);
     printf("Середнiй бал за 5 предметів: %.2lf\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", averageGrade);
